@@ -1,0 +1,179 @@
+:root {
+    --light: #dfcbf2;
+    --veryDark: #000000;
+    --veryLight: #ffffff;
+    --dark: #3d554c;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+header {
+    background-color: var(--veryDark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    height: 10vh;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--veryLight);
+    display: block;
+    padding: 16px 60px;
+    font-weight: bold;
+    background-color: var(--veryDark);
+    opacity: 1;
+    transition: 0.4s;
+}
+
+nav ul li a:hover {
+    background-color: var(--light);
+    color: var(--veryDark);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    opacity: 1;
+    padding: 31px 80px;
+}
+
+h1 {
+    color: var(--veryLight);
+    margin-left: 10ch;
+    font-family: 'Space Mono', monospace;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--veryLight);
+}
+
+body {
+    margin: 0;
+    background-color: var(--veryDark);
+    overflow-x: hidden;
+}
+
+.title-Header {
+    background-image: url('https://wallpapers.com/images/hd/moon-earth-movement-0jyawt0ifj8aja98.jpg');
+    background-position: -10ch center;
+    background-attachment: fixed;
+    width: 100%;
+    z-index: -99;
+    height: 150vh;
+}
+
+main {
+    height: 130vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main h1 {
+    margin: 20vh 0 0 50ch;
+}
+
+main p {
+    color: var(--veryLight);
+    margin: 0vh 0 0 110ch;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light);
+    transition: .4s;
+}
+
+a:hover {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.test {
+    margin: -105vh 0 0 -10ch;
+}
+
+.gallery {
+    --z: 32px;
+    /* control the zig-zag  */
+    --s: 360px;
+    /* control the size */
+    --g: 8px;
+    /* control the gap */
+
+    display: grid;
+    gap: var(--g);
+    width: calc(2*var(--s) + var(--g));
+    grid-auto-flow: column;
+}
+
+.gallery>img {
+    width: 0;
+    min-width: calc(100% + var(--z)/2);
+    height: var(--s);
+    object-fit: cover;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.gallery>img:hover {
+    width: calc(var(--s)/2);
+}
+
+.gallery>img:first-child {
+    place-self: start;
+    clip-path: polygon(calc(2*var(--z)) 0, 100% 0, 100% 100%, 0 100%);
+    --mask:
+        conic-gradient(from -135deg at right, #0000, #000 1deg 89deg, #0000 90deg) 50%/100% calc(2*var(--z)) repeat-y;
+}
+
+.gallery>img:last-child {
+    place-self: end;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 2*var(--z)) 100%, 0 100%);
+    --mask:
+        conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 50% calc(50% - var(--z))/100% calc(2*var(--z)) repeat-y;
+}
+
+.picturesHover {
+    margin: -90vh 0 0 75ch;
+}
+
+.endTxt {
+    margin: -30vh 0 0 100ch;
+}
+
+.textHover {
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+}
+
+.textHover::before {
+    background: var(--dark);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+    text-decoration: none;
+}
+
+.textHover:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    text-decoration: none;
+
+}

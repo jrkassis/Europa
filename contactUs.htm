@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS Files/contactStyle.css">
+    <link rel="icon" type="image/x-icon" href="C:\Users\marylin.atmeh\Desktop\JoeKassis-Midterm\Images\favicon2.jpg">
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="index.htm">EUROPA</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="about.htm">About</a></li>
+                <li><a href="gallery.htm">Gallery</a></li>
+                <li><a href="contactUs.htm">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--First Name, Last Name, Gender, Nationality, Address, e-mail address, phone number, Message field.-->
+    <main>
+        <div>
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td class="inputWidth"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td class="inputWidth"><select name="gender" class="selectBox">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="none">Do Not Specify</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td class="inputWidth"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td class="inputWidth"><input type="address"></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td class="inputWidth"><input type="email" name="email" id=""></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td class="inputWidth"><input type="number" name="phoneNumber"></td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                    <td class="inputWidth"><input type="text" class="messageBox"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="buttonSubmit">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="myContact">
+            <h1>Contact Info</h1>
+            <ul>
+                <li>Joe Kassis</li>
+                <li>
+                    <address>Notre Dame University - Louaize, XJ28+73C, Zouq Mosbeh</address>
+                </li>
+                <li>71 845 731</li>
+                <li><a href="https://www.gmail.com">E-Mail</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>Copyright &copy; 2023</footer>
+
+</body>
+
+<script type="module">
+    import { ghostCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+    new ghostCursor();
+</script>
+
+</html>
