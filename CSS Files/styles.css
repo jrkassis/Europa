@@ -1,0 +1,291 @@
+:root {
+    --light: #dfcbf2;
+    --veryDark: #000000;
+    --veryLight: #ffffff;
+    --dark: #3d554c;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+header{
+    background-color: var(--veryDark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    height: 10vh;   
+}
+
+main {
+    height: 130vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main h1 {
+    margin-top: 20vh;
+    margin-left: 32ch;
+    font-size: 48px;
+}
+
+main p {
+    color: var(--veryLight);
+    text-transform: none;
+    margin-top: -5vh;
+    margin-left: 80ch;
+    z-index: +100;
+    font-size: 20px;
+}
+
+.buttonRegister {
+    width: 175px;
+    background: #008cff;
+    color: var(--veryLight);
+    font-size: 20px;
+    border-radius: 25px 25px;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-weight: bold;
+    margin-right: 10ch;
+}
+
+.buttonRegister:hover {
+    background: var(--light);
+    color: var(--veryDark);
+    transition: 0.4s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.title-Header {
+    background-image: url('https://wallpapers.com/images/hd/moon-earth-movement-0jyawt0ifj8aja98.jpg');
+    background-position: -10ch center;
+    background-attachment:scroll;
+    width: 100%;
+    z-index: -99;
+    height: 90vh;
+}
+
+footer {
+    height: 55vh;
+    background-color: var(--veryDark);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: var(--veryLight);
+}
+
+body   {
+    margin: 0;
+    background-color: var(--veryDark);
+    overflow-x: hidden;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--veryLight);
+    display: block;
+    padding: 16px 60px;
+    font-weight: bold;
+    background-color: var(--veryDark);
+    transition: 0.4s;
+}
+
+nav ul li a:hover{
+    background-color: var(--light);
+    color: var(--veryDark);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 31px 80px;
+}
+
+h1 {
+    color: var(--veryLight);
+    margin-left: 10ch;
+    font-family: 'Space Mono', monospace;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--veryLight);
+}
+
+.imageBody {
+    --g: 8px;
+    /* the gap */
+    --b: 8px;
+    /* border thickness*/
+    --c: var(--veryLight);
+    /* the color */
+
+    border-radius: 16px;
+
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+    background:
+        var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+        var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b), var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: .4s;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.imageBody:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+    --b: 12px;
+    --g: 12px;
+    --c: var(--light);
+    width: 216px;
+    height: 216px;
+}
+
+main div a {
+    text-decoration: none;
+}
+
+.square-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/22/14/42/globe-1849404_1280.png');
+    width: 100%;
+    background-position: bottom center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    justify-items: start;
+    background-color: var(--veryDark);
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-top: 0px;
+}
+
+.captions {
+    color: var(--veryLight);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px){
+    nav ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: var(--veryLight);
+        display: block;
+        padding: 16px 30px;
+        font-weight: bold;
+        background-color: var(--veryDark);
+        transition: 0.4s;
+        font-size: 16px;
+    }
+    
+    nav ul li a:hover{
+        background-color: var(--light);
+        color: var(--veryDark);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        padding: 20px 32px;
+    }
+    
+    h1 {
+        color: var(--veryLight);
+        margin-left: 5%;
+        font-family: 'Space Mono', monospace;
+    }
+    
+    h1 a {
+        text-decoration: none;
+        color: var(--veryLight);
+    }
+
+    .buttonRegister {
+        width: 175px;
+        background: #008cff;
+        color: var(--veryLight);
+        font-size: 16px;
+        border-radius: 25px 25px;
+        border: none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        font-weight: bold;
+        margin-right: 10ch;
+    }
+
+    .title-Header {
+        background-image: url('https://wallpapers.com/images/hd/moon-earth-movement-0jyawt0ifj8aja98.jpg');
+        background-position: -50ch center;
+        background-attachment:scroll;
+        z-index: -99;
+        height: 90vh;
+    }
+
+    main h1 {
+        margin-top: 10vh;
+        margin-left: 15ch;
+        font-size: 36px;
+    }
+    
+    main p {
+        color: var(--veryLight);
+        text-transform: none;
+        margin-top: -5vh;
+        margin-left: 30ch;
+        z-index: +100;
+        font-size: 16px;
+    }
+
+    .square-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 90px;
+        background-image: url('https://cdn.pixabay.com/photo/2016/11/22/14/42/globe-1849404_1280.png');
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 150vh;
+        justify-items: start;
+        background-color: var(--veryDark);
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        margin-top: 0vh;
+    }
+    main {
+        height: 190vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer {
+        height: 45vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-end;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        color: var(--veryLight);
+    }
+}

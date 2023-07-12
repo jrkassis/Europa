@@ -1,0 +1,268 @@
+:root {
+    --light: #dfcbf2;
+    --veryDark: #000000;
+    --veryLight: #ffffff;
+    --dark: #3d554c;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+body {
+    height: 200vh;
+    margin: 0;
+    background-color: var(--veryDark);
+}
+
+#planets {
+    background-image: url('https://cdn.pixabay.com/photo/2018/10/16/07/07/stars-3750824_1280.png');
+    background-repeat: no-repeat;
+    position: sticky;
+    background-size: contain;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main div a {
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--veryDark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    height: 10vh;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--veryLight);
+    display: block;
+    padding: 16px 60px;
+    font-weight: bold;
+    background-color: var(--veryDark);
+    opacity: 1;
+    transition: 0.4s;
+}
+
+nav ul li a:hover {
+    background-color: var(--light);
+    color: var(--veryDark);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    opacity: 1;
+    padding: 31px 80px;
+}
+
+h1 {
+    color: var(--veryLight);
+    margin-left: 10ch;
+    font-family: 'Space Mono', monospace;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--veryLight);
+}
+
+header h1 {
+    color: var(--veryLight);
+    font-family: 'Space Mono', monospace;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: var(--veryLight);
+}
+
+.imgCircle {
+    --m:
+        radial-gradient(circle farthest-side at right, #000 99%, #0000) 0 100%/46% 92% no-repeat,
+        radial-gradient(circle farthest-side at left, #000 99%, #0000) 100% 0/46% 92% no-repeat;
+    -webkit-mask: var(--m);
+    mask: var(--m);
+    filter: grayscale(100%);
+    transition: .4s linear;
+    cursor: pointer;
+}
+
+.imgCircle:hover {
+    -webkit-mask-position: 7.5% 50%, 92.5% 50%;
+    mask-position: 7.5% 50%, 92.5% 50%;
+    filter: grayscale(0);
+    margin: 8px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    gap: 15ch;
+    height: 90vh;
+}
+
+.container a {
+    color: var(--veryLight);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.container a:hover {
+    color: var(--light);
+    font-size: 24px;
+}
+
+main section h1 {
+    margin-left: 32ch;
+    font-size: 40px;
+
+    color: var(--veryLight);
+
+    text-shadow: 0 2px 2px var(--veryLight),
+        -4px 8px 0px #abababaa,
+        -6px 11px 0px #8e8e8e96,
+        -8px 14px 0px #7d7d7d74,
+        -10px 17px 0px #6f6f6f47,
+        -12px 20px 0px #4a4a4a20,
+        -14px 23px 0px #1d1d1d05;
+}
+
+.imageBody {
+    --g: 8px;
+    /* the gap */
+    --b: 8px;
+    /* border thickness*/
+    --c: var(--veryLight);
+    /* the color */
+
+    border-radius: 16px;
+
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+    background:
+        var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+        var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b), var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: .4s;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.imageBody:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+    --b: 12px;
+    --g: 12px;
+    --c: var(--light);
+    width: 216px;
+    height: 216px;
+}
+
+.square-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/22/14/42/globe-1849404_1280.png');
+    width: 100%;
+    background-position: bottom center ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    justify-items: start;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-top: 0px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.captions {
+    color: var(--veryLight);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#moons {
+    background-image: url('https://cdn.pixabay.com/photo/2016/07/19/04/40/moon-1527501_1280.jpg');
+    background-repeat: no-repeat;
+    position: sticky;
+    background-position: bottom center ;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.square-images-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+    width: 100%;
+    height: 100vh;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-top: 0px;
+    background-size: cover;
+}
+
+.h1-asteroids {
+    margin-left: 30ch;
+}
+
+#asteroids {
+    background-image: url('https://cdn.pixabay.com/photo/2018/10/16/07/07/stars-3750824_1280.png');
+    background-repeat: no-repeat;
+    position: sticky;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#galaxies {
+    background-image: url('https://cdn.pixabay.com/photo/2018/10/16/07/07/stars-3750824_1280.png');
+    background-repeat: no-repeat;
+    position: sticky;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.h1-galaxies {
+    margin-left: 30.5ch;
+}
+
+#planets {
+    background-image: url('https://cdn.pixabay.com/photo/2018/10/16/07/07/stars-3750824_1280.png');
+    background-repeat: no-repeat;
+    position: sticky;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px){
+    
+}
